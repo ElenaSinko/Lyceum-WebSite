@@ -4,7 +4,7 @@
 > In the folder with the project type *npm i*
 > >Run the project: *npm run start*
 
-![illustration for the project](https://github.com/ElenaSinko/Lyceum-WebSite/raw/master/lycee/src/img/unnamed.png)
+![illustration for the project](https://github.com/ElenaSinko/Lyceum-WebSite/raw/master/lyceum-website/src/img/unnamed.png)
 
 This is the responsive website with ReactJs.
 Over time, the functionality will be enhanced. 
