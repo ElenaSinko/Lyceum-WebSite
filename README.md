@@ -6,5 +6,8 @@
 
 ![illustration for the project](https://github.com/ElenaSinko/Lyceum-WebSite/raw/master/lyceum-website/src/img/page-examples/HomePage.png)
 
+![illustration for the project](https://github.com/ElenaSinko/Lyceum-WebSite/raw/master/lyceum-website/src/img/page-examples/AnnouncesPage.png)
+
+
 This is the responsive website with ReactJs.
 Over time, the functionality will be enhanced. 
