@@ -1,10 +1,10 @@
 import React from "react";
-import classes from "./FormContacts.module.scss"
+import classes from "./FormContacts.module.scss";
 import Button from "../UI/Button/Button";
 import WOW from 'wowjs';
 import Input from "../UI/Input/Input";
-import ModalWindow from '../UI/ModalWindow/ModalWindow'
-import axios from 'axios'
+import ModalWindow from '../UI/ModalWindow/ModalWindow';
+import axios from 'axios';
 
 function validateEmail(email) {
     const re = /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -185,6 +185,7 @@ export default class FormContacts extends React.Component {
             .then(() => {
                 this.setState({modalWindowSentSuccessfully: true});
                 this.setState({formControls: initialState.formControls})
+                this.setState({isFormValid: false})
 
             })
             .catch(() => this.setState({modalWindowError: true}))
