@@ -1,0 +1,37 @@
+.AnnouncementItemPage {
+  min-height: 410px;
+}
+
+.BlockTitle {
+  background-color: rgba(55, 71, 79, .2);
+  min-height: 20px;
+  font-size: 20px;
+  margin-bottom: 0;
+  padding: 2%;
+}
+
+.AnnounceArticle {
+  margin: 10px 10%;
+}
+
+.Link {
+  text-decoration: none;
+  color: #282c34;
+}
+
+i {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.Link:hover {
+  color: rgba(55, 71, 79, .8);
+}
+
+.Link:active {
+  color: rgba(55, 71, 79, .5);
+}
+
+p {
+  text-indent: 40px;
+}

@@ -1,0 +1,9 @@
+.ContactsPage {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  min-height: 400px;
+  margin: 40px 0 20px 0;
+}

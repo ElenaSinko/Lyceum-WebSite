@@ -1,0 +1,2 @@
+export const CHANGE_MENU_STATE = 'CHANGE_MENU_STATE';
+export const CLOSE_MENU = 'CLOSE_MENU';

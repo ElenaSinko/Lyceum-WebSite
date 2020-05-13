@@ -1,0 +1,42 @@
+.LinkButton {
+  display: inline-block;
+  padding: 10px 40px;
+  margin-right: 15px;
+  text-decoration: none;
+  border: 2px solid #37474F;
+  color: #fff;
+  background-color: #37474F;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.LinkButton:focus {
+  outline: none;
+}
+
+.LinkButton:hover {
+  background-color: #546E7A;
+  color: #CFD8DC;
+}
+
+.LinkButton.Important {
+  background-color: rgba(122, 27, 12, 0.9);
+  border: 3px solid #7a1b0c;
+}
+
+.LinkButton.Important:hover {
+  background-color: rgba(122, 27, 12, 0.7);
+}
+
+
+.LinkButton:active {
+  box-shadow: inset 2px 2px 1px rgba(0, 0, 0, .3);
+}
+
+.LinkButton:disabled {
+  background: #ccc;
+  color: #000;
+  cursor: not-allowed;
+}

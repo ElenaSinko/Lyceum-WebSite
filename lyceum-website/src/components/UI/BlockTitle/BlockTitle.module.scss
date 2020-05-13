@@ -1,0 +1,25 @@
+.BlockTitle {
+  background-color: rgba(55, 71, 79, .2);
+  min-height: 20px;
+  font-size: 20px;
+  margin-bottom: 0;
+  padding: 2%;
+}
+
+i {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.Link {
+  text-decoration: none;
+  color: #282c34;
+}
+
+.Link:hover {
+  color: rgba(55, 71, 79, .8);
+}
+
+.Link:active {
+  color: rgba(55, 71, 79, .5);
+}

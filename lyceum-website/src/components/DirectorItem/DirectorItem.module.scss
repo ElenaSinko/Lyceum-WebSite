@@ -1,0 +1,74 @@
+.DirectorItem {
+  display: flex;
+  width: 410px;
+  min-height: 190px;
+  margin-bottom: 10px;
+  background-color: rgba(144, 164, 174, .1);
+  border: 3px solid rgba(144, 164, 174, .9);
+}
+
+.Portrait {
+  width: 160px;
+  height: 200px;
+}
+
+.PortraitContainer {
+  width: 160px;
+  height: 200px;
+}
+
+.DirectorAbout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.DirectorAbout h3 {
+  margin-bottom: 0;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.DirectorAbout h4 {
+  display: block;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+
+.DirectorAbout p {
+  margin: 0 0 18px 10px;
+  padding: 0;
+}
+
+.DirectorAbout span {
+  font-weight: bold;
+}
+
+.Flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  width: 250px;
+  margin-top: 0;
+}
+
+@media (max-width: 420px) {
+  .DirectorItem {
+    width: 350px;
+    min-height: 170px;
+    justify-content: center;
+  }
+
+  .Portrait {
+    width: 140px;
+    height: 180px;
+  }
+
+  .PortraitContainer {
+    width: 110px;
+    height: 180px;
+  }
+}
+

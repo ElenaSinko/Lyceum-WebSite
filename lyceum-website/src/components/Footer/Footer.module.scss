@@ -1,0 +1,31 @@
+.Footer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  min-height: 60px;
+  padding: 10px 30px 10px 30px;
+  color: #fff;
+  background-color: #37474F;
+}
+
+.Footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Footer li {
+  padding-bottom: 10px;
+}
+
+.Footer.Contacts {
+  margin-right: 20px;
+}
+
+.Logo {
+  width: 200px;
+  height: 200px;
+}
+
+
+
