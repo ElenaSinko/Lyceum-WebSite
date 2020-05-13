@@ -1,11 +1,13 @@
+@import '../../../utils/colors';
+
 .LinkButton {
   display: inline-block;
   padding: 10px 40px;
   margin-right: 15px;
   text-decoration: none;
-  border: 2px solid #37474F;
-  color: #fff;
-  background-color: #37474F;
+  border: 2px solid $dark-grey;
+  color: $white;
+  background-color: $dark-grey;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 12px;
@@ -17,26 +19,20 @@
 }
 
 .LinkButton:hover {
-  background-color: #546E7A;
-  color: #CFD8DC;
+  background-color: $button-hover-bg;
+  color: $button-hover;
 }
 
 .LinkButton.Important {
-  background-color: rgba(122, 27, 12, 0.9);
-  border: 3px solid #7a1b0c;
+  background-color: $button-alert-bg;
+  border: 3px solid $button-alert-border;
 }
 
 .LinkButton.Important:hover {
-  background-color: rgba(122, 27, 12, 0.7);
+  background-color: $button-alert-hover-bg;
 }
 
 
 .LinkButton:active {
-  box-shadow: inset 2px 2px 1px rgba(0, 0, 0, .3);
-}
-
-.LinkButton:disabled {
-  background: #ccc;
-  color: #000;
-  cursor: not-allowed;
+  box-shadow: inset 2px 2px 1px $button-alert-active-shadow;
 }

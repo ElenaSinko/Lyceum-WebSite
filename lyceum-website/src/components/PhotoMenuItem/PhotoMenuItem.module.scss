@@ -1,3 +1,5 @@
+@import '../../utils/colors';
+
 .PhotoMenuItemContainer {
   flex-basis: auto;
   width: 290px;
@@ -6,8 +8,6 @@
   background-size: cover;
 }
 
-
-
 .PhotoMenuItem {
   display: flex;
   flex-direction: column;
@@ -15,41 +15,42 @@
   justify-content: space-around;
   width: 290px;
   height: 330px;
+
+  h3 {
+    display: block;
+    max-width: 220px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 34px;
+    color: $white;
+    margin-bottom: 0;
+    background-color: $photo-menu-item-h3-background;
+  }
+
+  p {
+    display: flex;
+    margin-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 19px;
+    text-align: center;
+    color: $photo-menu-item-p-color;
+  }
+
+  Button:hover {
+    background-color: $photo-menu-item-button-bg;
+    color: $white;
+    transition: all 1.5ms;
+  }
+
 }
 
 .PhotoMenuItem:hover {
-  background-color: rgba(144, 164, 174, .9);
+  background-color: $photo-menu-item-bg;
  }
 
 .PhotoMenuItem:hover p {
-  color: #ffffff;
-}
-
-.PhotoMenuItem h3 {
-  display: block;
-  max-width: 220px;
-  text-align: center;
-  padding: 10px;
-  margin-top: 15px;
-  font-size: 34px;
-  color: #ffffff;
-  margin-bottom: 0;
-  background-color: rgba(144, 164, 174, .9);
-}
-
-.PhotoMenuItem p {
-  display: flex;
-  margin-top: 15px;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-size: 19px;
-  text-align: center;
-  color: rgba(255, 255, 255, .0);
-}
-
-.PhotoMenuItem Button:hover {
-  background-color: #546E7A;
-  color: #ffffff;
-  transition: all 1.5ms;
+  color: $white;
 }
 

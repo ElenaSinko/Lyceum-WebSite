@@ -1,5 +1,7 @@
+@import '../../../utils/colors';
+
 .BlockTitle {
-  background-color: rgba(55, 71, 79, .2);
+  background-color: $block-title-bg;
   min-height: 20px;
   font-size: 20px;
   margin-bottom: 0;
@@ -17,9 +19,9 @@ i {
 }
 
 .Link:hover {
-  color: rgba(55, 71, 79, .8);
+  color: $block-title-hover;
 }
 
 .Link:active {
-  color: rgba(55, 71, 79, .5);
+  color: $block-title-active;
 }

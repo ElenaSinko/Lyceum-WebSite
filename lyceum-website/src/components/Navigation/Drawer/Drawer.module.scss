@@ -1,3 +1,5 @@
+@import '../../../utils/colors';
+
 .Drawer {
   position: fixed;
   z-index: 90;
@@ -9,10 +11,23 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background: #fff;
+  background: $white;
   transform: translateX(0px);
   transition: transform .22s ease-in;
   list-style: none;
+
+  li:hover {
+    border-right: 10px solid $dark-grey;
+    background-color: $header-item-bg;
+
+  }
+
+  li:active {
+    border-right: 10px solid $dark-grey;
+    opacity: .9;
+
+  }
+
 }
 
 .Drawer.close {
@@ -25,23 +40,11 @@ ul li {
   margin: 0;
 }
 
-.Drawer li:hover {
-  border-right: 10px solid #37474F;
-  background-color: rgba(55, 71, 79, .2);
-
-}
-
-.Drawer li:active {
-  border-right: 10px solid #37474F;
-  opacity: .9;
-
-}
-
 .DrawerRef {
   text-decoration: none;
   display: flex;
   padding: 20px;
-  color: #282c34;
+  color: $dark-grey;
 }
 
 .DrawerToggleMenu {

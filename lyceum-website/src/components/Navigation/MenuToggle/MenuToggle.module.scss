@@ -1,9 +1,11 @@
+@import '../../../utils/colors';
+
 .MenuToggle {
     margin-top: 25px;
     margin-right: 40px;
     font-size: 40px;
     cursor: pointer;
-    color: #37474F;
+    color: $dark-grey;
     transition: opacity, left .22s ease-in;
 }
 
@@ -15,7 +17,7 @@
     position: fixed;
     top: 0;
     right: 320px;
-    color: #263238;
+    color: $menu-toggle-dark-grey;
 }
 
 @media (max-width: 420px) {

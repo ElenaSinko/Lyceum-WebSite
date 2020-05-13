@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ScrollToTop from './hoc/ScrollToTop'
 import {BrowserRouter} from 'react-router-dom'
 import './index.css';
 import App from './App';
@@ -22,7 +23,9 @@ ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
             <BrowserRouter>
+                <ScrollToTop>
                 <App />
+                </ScrollToTop>
             </BrowserRouter>
         </Provider>
     </React.StrictMode>,

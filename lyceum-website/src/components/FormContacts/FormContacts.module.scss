@@ -1,11 +1,13 @@
+@import '../../utils/colors';
+
 .FormContacts {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
   padding: 15px 15px 25px 15px;
-  background-color: rgba(255, 255, 255, .8);
-  border: 3px solid rgba(144, 164, 174, .9);
+  background-color: $form-contacts-bg;
+  border: 3px solid $form-contacts-border;
 }
 
 h2 {
@@ -24,14 +26,9 @@ Button {
 
 @media (max-width: 400px) {
   .FormContacts {
-    flex-direction: column;
-    align-items: center;
     width: 320px;
     max-height: 400px;
     padding: 15px;
-    margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, .8);
-    border: 3px solid rgba(144, 164, 174, .9);
   }
 }
 

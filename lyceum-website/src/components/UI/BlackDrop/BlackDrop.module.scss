@@ -1,6 +1,8 @@
+@import '../../../utils/colors';
+
 .Backdrop {
   z-index: 50;
-  background: rgba(69, 90, 100, 0.6);
+  background: $backdrop-bg;
   position: fixed;
   top: 0;
   left: 0;

@@ -1,11 +1,28 @@
+@import '../../utils/colors';
+
 .Header {
   position: fixed;
   display: flex;
   justify-content: space-between;
   width: 100%;
   min-height: 100px;
-  background-color: rgba(255, 255, 255, .8);
-  box-shadow: 1px 1px 5px rgba(144, 164, 174, .2);
+  background-color: $header-bg;
+  box-shadow: 1px 1px 5px $header-shadow;
+
+  li {
+    flex-basis: auto;
+    padding-top: 35px;
+    padding-bottom: 25px;
+    margin-bottom: 0;
+    border-bottom: 5px solid transparent;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  li:hover {
+    border-bottom: 5px solid $dark-grey;
+    background-color: $header-item-bg;
+  }
 }
 
 .Logo {
@@ -28,25 +45,10 @@
   list-style: none;
 }
 
-.Header li {
-  flex-basis: auto;
-  padding-top: 35px;
-  padding-bottom: 25px;
-  margin-bottom: 0;
-  border-bottom: 5px solid transparent;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.Header li:hover {
-  border-bottom: 5px solid #37474F;
-  background-color: rgba(55, 71, 79, .2);
-}
-
 .Link {
   padding: 35px 30px 40px 30px;
   text-decoration: none;
-  color: #263238;
+  color: $dark-grey;
   border-bottom: 5px solid transparent;
   cursor: pointer;
 }

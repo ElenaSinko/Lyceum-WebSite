@@ -1,13 +1,7 @@
+@import '../../utils/colors';
+
 .AnnouncementItemPage {
   min-height: 410px;
-}
-
-.BlockTitle {
-  background-color: rgba(55, 71, 79, .2);
-  min-height: 20px;
-  font-size: 20px;
-  margin-bottom: 0;
-  padding: 2%;
 }
 
 .AnnounceArticle {
@@ -16,7 +10,7 @@
 
 .Link {
   text-decoration: none;
-  color: #282c34;
+  color: $menu-toggle-dark-grey;
 }
 
 i {
@@ -25,11 +19,11 @@ i {
 }
 
 .Link:hover {
-  color: rgba(55, 71, 79, .8);
+  color: $block-title-hover;
 }
 
 .Link:active {
-  color: rgba(55, 71, 79, .5);
+  color: $block-title-active;
 }
 
 p {

@@ -2,6 +2,7 @@ import React from "react";
 import classes from './AnnouncementItemPage.module.scss'
 import {Link} from "react-router-dom"
 import {connect} from 'react-redux'
+import BlockTitle from "../../components/UI/BlockTitle/BlockTitle";
 
 const AnnouncementItemPage = props => {
 
@@ -19,9 +20,9 @@ const AnnouncementItemPage = props => {
     })[0];
     return (
         <div className={classes.AnnouncementItemPage}>
-            <div className={classes.BlockTitle}>
-                <Link className={classes.Link} to={'/'}>Accueil</Link> <i className="fas fa-arrow-circle-right"/> <Link className={classes.Link} to={'/actualite'}>Actualité</Link> <i className="fas fa-arrow-circle-right" /> {AnnounceToShow.title}
-            </div>
+            <BlockTitle>
+                <Link className={classes.Link} to={'/actualite'}>Actualité</Link> <i className="fas fa-arrow-circle-right"/> {AnnounceToShow.title}
+            </BlockTitle>
             <div className={classes.AnnounceArticle}>
             <h1>{AnnounceToShow.title}</h1>
                 {AnnounceToShow.text.map((p, index) => {

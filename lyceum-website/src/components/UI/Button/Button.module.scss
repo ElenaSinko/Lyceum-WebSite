@@ -1,13 +1,15 @@
+@import '../../../utils/colors';
+
 .Button {
   display: inline-block;
   padding: 10px 20px;
   margin-right: 15px;
-  color: #fff;
+  color: $white;
   font-weight: bold;
   font-size: 12px;
   text-transform: uppercase;
-  background-color: #37474F;
-  border: 2px solid #37474F;
+  background-color: $dark-grey;
+  border: 2px solid $dark-grey;
   cursor: pointer;
 }
 
@@ -16,19 +18,19 @@
 }
 
 .Button:hover {
-  color: #CFD8DC;
-  background-color: #546E7A;
+  color: $button-hover;
+  background-color: $button-hover-bg;
 }
 
 .Button.Important {
-  background-color: rgba(122, 27, 12, 0.9);
-  border: 3px solid #7a1b0c;
+  background-color: $button-alert-bg;
+  border: 3px solid $button-alert-border;
 }
 
 .Button.Important:hover {
-  background-color: rgba(122, 27, 12, 0.7);
+  background-color: $button-alert-hover-bg;
 }
 
 .Button:active {
-  box-shadow: inset 2px 2px 1px rgba(0, 0, 0, .3);
+  box-shadow: inset 2px 2px 1px $button-alert-active-shadow;
 }

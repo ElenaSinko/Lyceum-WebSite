@@ -1,10 +1,12 @@
+@import '../../utils/colors';
+
 .PhotoContainer {
   display: flex;
   justify-content: flex-end;
   min-height: 400px;
   padding-top: 40px;
   padding-bottom: 20px;
-  background-color: rgba(144, 164, 174, .9);
+  background-color: $form-contacts-border;
   background-image: url("../../img/128578.HR (1).jpg");
   background-size: 100%;
 }
@@ -17,13 +19,14 @@
   padding: 0 30px 30px;
   margin-right: 17%;
   margin-bottom: 20px;
-  background-color: rgba(144, 164, 174, .9);
+  background-color: $form-contacts-border;
+
+  h1 {
+    margin: auto;
+    border-bottom: 5px solid $menu-toggle-dark-grey;
+  }
 }
 
-.AboutSchool h1 {
-  margin: auto;
-  border-bottom: 5px solid #263238;
-}
 
 .ButtonContainer {
   width: 300px;
