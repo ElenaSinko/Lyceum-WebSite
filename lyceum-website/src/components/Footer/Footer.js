@@ -3,6 +3,7 @@ import classes from './Footer.module.scss'
 import logo from '../../img/unnamed.png';
 import WOW from 'wowjs';
 import Media from 'react-media';
+import {Link} from "react-router-dom";
 
 class Footer extends React.Component {
     componentDidMount() {
@@ -19,7 +20,7 @@ class Footer extends React.Component {
                 <Media queries={{
                     small: "(min-width: 600px)",
                 }}>
-                    {matches => (matches.small && <img src={logo} className={cls.join(' ')} alt="logo" data-wow-duration="zs"/>)}
+                    {matches => (matches.small && <Link to={'/'}><img src={logo} className={cls.join(' ')} alt="logo" data-wow-duration="zs"/></Link>)}
                 </Media>
                 <div className={clsContacts.join(' ')} data-wow-duration="2s" data-wow-delay=".1s">
                     <h2>Coordonnées</h2>

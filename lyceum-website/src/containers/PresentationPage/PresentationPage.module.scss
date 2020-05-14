@@ -1,7 +1,8 @@
 @import '../../utils/colors';
+@import '../../utils/constatnts';
 
 .PresentationPage {
-  min-height: 440px;
+  min-height: $min-page-height;
 
   h3 {
     margin-bottom: 60px;

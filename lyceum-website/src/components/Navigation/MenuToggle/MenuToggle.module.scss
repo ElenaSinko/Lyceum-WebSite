@@ -7,10 +7,16 @@
     cursor: pointer;
     color: $dark-grey;
     transition: opacity, left .22s ease-in;
-}
 
-.MenuToggle:hover {
-    opacity: .7;
+    &:hover {
+        opacity: .7;
+    }
+
+    &:focus, &:active {
+        outline: none;
+        opacity: .7;
+    }
+
 }
 
 .MenuToggle.open {

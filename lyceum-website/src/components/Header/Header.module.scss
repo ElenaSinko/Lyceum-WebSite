@@ -2,10 +2,11 @@
 
 .Header {
   position: fixed;
+  z-index: 50;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  min-height: 100px;
+  //min-height: 100px;
   background-color: $header-bg;
   box-shadow: 1px 1px 5px $header-shadow;
 
@@ -17,23 +18,43 @@
     border-bottom: 5px solid transparent;
     font-size: 16px;
     cursor: pointer;
-  }
 
-  li:hover {
-    border-bottom: 5px solid $dark-grey;
-    background-color: $header-item-bg;
+    &:hover {
+      border-bottom: 5px solid $dark-grey;
+      background-color: $header-item-bg;
+    }
+
+    a {
+      border-bottom: 5px solid transparent;
+      padding-bottom: 44px;
+    }
+
+    a:active, a:focus {
+      outline: none;
+      border-bottom: 5px solid $dark-grey;
+      background-color: $header-item-bg;
+    }
+  }
+}
+
+.LogoContainer {
+  a:active, a:focus, a:hover {
+    outline: none;
+    filter: brightness(0.7);
   }
 }
 
 .Logo {
-  width: 100px;
-  height: 100px;
+  outline: none;
+  border: none;
+  max-width: 100px;
+  max-height: 100px;
   margin-left: 10px;
 }
 
 .HeaderLogoTitle {
   display: block;
-  width: 130px;
+  width: 135px;
   margin-left: 20px;
   margin-top: 35px;
   font-size: 20px;
@@ -56,5 +77,14 @@
 .Flex {
   display: flex;
 }
+
+//a:active, a:focus { outline: none; }
+
+//input, textarea {outline:none;}
+//input:active, textarea:active {outline:none;}
+//:focus {outline:none;}
+//textarea {resize:none;}
+//textarea {resize:vertical;}
+//textarea {resize:horizontal;}
 
 

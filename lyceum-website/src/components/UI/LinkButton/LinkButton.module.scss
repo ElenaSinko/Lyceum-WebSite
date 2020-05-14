@@ -12,27 +12,34 @@
   font-weight: bold;
   font-size: 12px;
   cursor: pointer;
-}
 
-.LinkButton:focus {
-  outline: none;
-}
+  &:focus {
+    outline: none;
+    background-color: $button-hover-bg;
+    color: $button-hover;
+  }
 
-.LinkButton:hover {
-  background-color: $button-hover-bg;
-  color: $button-hover;
+  &:hover {
+    background-color: $button-hover-bg;
+    color: $button-hover;
+  }
 }
 
 .LinkButton.Important {
   background-color: $button-alert-bg;
   border: 3px solid $button-alert-border;
-}
 
-.LinkButton.Important:hover {
-  background-color: $button-alert-hover-bg;
-}
+  &:focus {
+    outline: none;
+    background-color: $button-alert-hover-bg;
+    color: $button-hover;
+  }
 
+  &:hover {
+    background-color: $button-alert-hover-bg;
+  }
 
-.LinkButton:active {
-  box-shadow: inset 2px 2px 1px $button-alert-active-shadow;
+  &:active {
+    box-shadow: inset 2px 2px 1px $button-alert-active-shadow;
+  }
 }

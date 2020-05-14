@@ -18,6 +18,11 @@
   li {
     padding-bottom: 10px;
   }
+
+  a:active, a:focus, a:hover {
+    outline: none;
+    filter: brightness(0.7);
+  }
 }
 
 

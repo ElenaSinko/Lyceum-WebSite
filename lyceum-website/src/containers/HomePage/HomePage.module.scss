@@ -1,4 +1,9 @@
 @import '../../utils/colors';
+@import '../../utils/constatnts';
+
+.HomePage {
+  min-height: $min-page-height;
+}
 
 .PhotoContainer {
   display: flex;

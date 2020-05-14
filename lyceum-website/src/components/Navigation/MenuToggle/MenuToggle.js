@@ -10,11 +10,20 @@ const MenuToggle = props => {
         cls.push(`fa-bars`)
     }
 
-    return (<React.Fragment>
-            {props.isOpen && <i className={`${classes.MenuToggle} fa fa-bars`} />}
+    function keyDownHandler(evt) {
+        if(evt.keyCode === 13){
+            props.onToggle();
+        }
+    }
+
+    return (
+        <React.Fragment>
+            {props.isOpen && <i tabIndex='0' className={`${classes.MenuToggle} fa fa-bars`} />}
             <i
+                tabIndex='0'
                 className={cls.join(' ')}
                 onClick={props.onToggle}
+                onKeyDown={(evt) =>keyDownHandler(evt)}
             />
         </React.Fragment>
     )

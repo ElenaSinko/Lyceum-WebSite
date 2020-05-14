@@ -1,9 +1,11 @@
+@import '../../utils/constatnts';
+
 .ContactsPage {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
-  min-height: 400px;
+  min-height: $min-page-height;
   margin: 40px 0 20px 0;
 }

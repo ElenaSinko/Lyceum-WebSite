@@ -28,9 +28,15 @@
 
   }
 
+  a:active, a:focus {
+    outline: none;
+    border-right: 10px solid $dark-grey;
+    background-color: $header-item-bg;
+  }
 }
 
 .Drawer.close {
+  display: none;
   transform: translateX(300px);
 }
 

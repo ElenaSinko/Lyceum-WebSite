@@ -14,9 +14,7 @@ const Drawer = props => {
     return(
         <React.Fragment>
             <Media queries={{
-                small: "(max-width: 1065px)",
-                medium: "(min-width: 1065px)",
-                    large: "(min-width: 1215px)"
+                small: "(max-width: 1100px)",
                 }}>
                     {matches => (matches.small && <ul className={cls.join(' ')}>
                         <li><NavLink onClick={props.onClose} activeStyle={{fontWeight: 'bold'}} to={'/'} exact className={`${classes.Link}`}>Accueil</NavLink></li>
@@ -33,9 +31,7 @@ const Drawer = props => {
                 </Media>
 
                 <Media queries={{
-                    small: "(max-width: 1065px)",
-                    medium: "(min-width: 1065px)",
-                    large: "(min-width: 1215px)"
+                    medium: "(min-width: 1100px)",
                 }}>
                     {matches => (matches.medium && <ul className={cls.join(' ')}>
                         <li><a className={classes.DrawerRef} href='http://lyceembele.ddns.net/pronote/eleve.html?login=true&fd=1' target="_blank" rel="noopener noreferrer">Pronote</a></li>

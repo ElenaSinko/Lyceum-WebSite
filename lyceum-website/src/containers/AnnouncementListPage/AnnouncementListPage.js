@@ -1,4 +1,5 @@
 import React from "react";
+import classes from './AnnouncementListPage.module.scss'
 import AnnouncementSection from "../../components/AnnouncementSection/AnnouncementSection";
 import BlockTitle from "../../components/UI/BlockTitle/BlockTitle";
 import {connect} from 'react-redux';
@@ -7,10 +8,10 @@ class AnnouncementListPage extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
+            <div className={classes.AnnouncementListPage}>
                 <BlockTitle>Actualite</BlockTitle>
                 <AnnouncementSection announcements={this.props.announcements}/>
-            </React.Fragment>
+            </div>
         )
     }
 }

@@ -1,5 +1,7 @@
+@import '../../utils/constatnts';
+
 .VacanciesPage {
-  min-height: 436px;
+  min-height: $min-page-height;
 }
 
 .VacanciesPage h1 {

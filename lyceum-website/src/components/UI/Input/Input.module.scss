@@ -20,6 +20,10 @@
     border-radius: 5px;
     outline: none;
     transition: all 300ms ease-in-out;
+
+    &:focus {
+      border: 1px solid $dark-grey;
+    }
   }
 
   span {

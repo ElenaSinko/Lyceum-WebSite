@@ -6,6 +6,11 @@
   font-size: 20px;
   margin-bottom: 0;
   padding: 2%;
+
+  a:focus, a:active {
+    outline: none;
+    color: $block-title-hover;
+  }
 }
 
 i {
@@ -16,12 +21,12 @@ i {
 .Link {
   text-decoration: none;
   color: #282c34;
-}
 
-.Link:hover {
-  color: $block-title-hover;
-}
+  &:hover {
+    color: $block-title-hover;
+  }
 
-.Link:active {
-  color: $block-title-active;
+  &:active {
+    color: $block-title-active;
+  }
 }

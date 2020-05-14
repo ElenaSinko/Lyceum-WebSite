@@ -11,26 +11,34 @@
   background-color: $dark-grey;
   border: 2px solid $dark-grey;
   cursor: pointer;
-}
 
-.Button:focus {
-  outline: none;
-}
+  &:focus, &:active {
+    outline: none;
+    color: $button-hover;
+    background-color: $button-hover-bg;
+  }
 
-.Button:hover {
-  color: $button-hover;
-  background-color: $button-hover-bg;
+  &:hover {
+    color: $button-hover;
+    background-color: $button-hover-bg;
+  }
+
 }
 
 .Button.Important {
   background-color: $button-alert-bg;
   border: 3px solid $button-alert-border;
-}
 
-.Button.Important:hover {
-  background-color: $button-alert-hover-bg;
-}
+  &:focus {
+    outline: none;
+    background-color: $button-alert-hover-bg;
+  }
 
-.Button:active {
-  box-shadow: inset 2px 2px 1px $button-alert-active-shadow;
+  &:hover {
+    background-color: $button-alert-hover-bg;
+  }
+
+  &:active {
+    box-shadow: inset 2px 2px 1px $button-alert-active-shadow;
+  }
 }

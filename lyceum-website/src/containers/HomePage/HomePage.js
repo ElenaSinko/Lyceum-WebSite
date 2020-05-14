@@ -16,7 +16,7 @@ class HomePage extends React.Component {
         const cls = [classes.AboutSchool, `wow`, 'slideInRight'];
         const clsContainer = [classes.PhotoContainer, `wow`, 'slideInRight'];
         return (
-            <React.Fragment>
+            <div className={classes.HomePage}>
                 <div className={clsContainer.join(' ')}>
                     <div className={cls.join(' ')}>
                         <h1>Lycée MBELE</h1>
@@ -32,7 +32,7 @@ class HomePage extends React.Component {
                 </div>
                 <PhotosMenuSection />
                 <AnnouncementSection announcements={this.props.announcements}/>
-            </React.Fragment>
+            </div>
         )
     }
 

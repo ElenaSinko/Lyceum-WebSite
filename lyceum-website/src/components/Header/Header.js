@@ -9,15 +9,17 @@ const Header = props => {
     return (
         <div className={classes.Header}>
             <div className={classes.Flex}>
+                <div className={classes.LogoContainer}>
                 <Link to={'/'}><img className={classes.Logo} src={logo} alt="logo"/></Link>
+                </div>
                 <Media queries={{
-                    large: "(min-width: 1215px)"
+                    large: "(min-width: 1260px)"
                 }}>
                     {matches => (matches.large && <h1 className={classes.HeaderLogoTitle}>Lycée MBELE</h1>)}
                 </Media>
             </div>
             <Media queries={{
-                medium: "(min-width: 1065px)"
+                medium: "(min-width: 1100px)"
             }}>
                 {matches => (matches.medium && <ul className={classes.HeaderList}>
                     <li><NavLink activeStyle={{fontWeight: 'bold'}} to={'/'} exact className={`${classes.Link}`}>Accueil</NavLink></li>
