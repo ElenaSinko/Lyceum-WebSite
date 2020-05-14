@@ -1,13 +1,15 @@
 import React from "react";
 import classes from "./Drawer.module.scss"
-import Backdrop from "../../UI/BlackDrop/BlackDrop"
+import BackDrop from "../../UI/BlackDrop/BlackDrop"
 import {NavLink} from "react-router-dom";
 import Media from 'react-media';
+import {connect} from "react-redux"
+import {closeMenu} from "../../../store/actions/actions";
 
 const Drawer = props => {
     let cls = [classes.Drawer];
 
-    if (!props.isOpen) {
+    if (!props.menuIsOpen) {
         cls.push(classes.close)
     }
 
@@ -41,10 +43,24 @@ const Drawer = props => {
                     </ul>)}
                 </Media>
 
-                {props.isOpen && <Backdrop onClick={props.onClose}/>}
+                {props.menuIsOpen && <BackDrop onClick={props.closeMenu}/>}
             </React.Fragment>
         )
 
 };
 
-export default Drawer
+function mapStateToProps(state) {
+    return {
+        menuIsOpen: state.lycee.menu
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        closeMenu: () => dispatch(closeMenu())
+    }
+}
+
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Drawer)

@@ -4,8 +4,11 @@ import logo from '../../img/unnamed.png';
 import {NavLink, Link} from "react-router-dom";
 import MenuToggle from "../Navigation/MenuToggle/MenuToggle";
 import Media from 'react-media';
+import {connect} from 'react-redux'
+import {changeMenuState} from '../../store/actions/actions'
 
 const Header = props => {
+    console.log(props)
     return (
         <div className={classes.Header}>
             <div className={classes.Flex}>
@@ -30,9 +33,21 @@ const Header = props => {
                     <li><NavLink activeStyle={{fontWeight: 'bold'}} to={'/contacts'} className={classes.Link}>Contacts</NavLink></li>
                 </ul>)}
             </Media>
-            <MenuToggle onToggle={props.onToggle} isOpen={props.isOpen}/>
+            <MenuToggle onToggle={props.changeMenuState} isOpen={props.menuIsOpen}/>
         </div>
     )
 };
 
-export default Header
+function mapStateToProps(state) {
+    return {
+     menuIsOpen: state.lycee.menu
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        changeMenuState: () => dispatch(changeMenuState())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

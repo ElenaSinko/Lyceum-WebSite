@@ -3,8 +3,9 @@ import classes from "./FormContacts.module.scss";
 import Button from "../UI/Button/Button";
 import WOW from 'wowjs';
 import Input from "../UI/Input/Input";
-import ModalWindow from '../UI/ModalWindow/ModalWindow';
 import axios from 'axios';
+import {connect} from "react-redux";
+import {openModalWindow} from "../../store/actions/actions"
 
 function validateEmail(email) {
     const re = /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -12,9 +13,6 @@ function validateEmail(email) {
 }
 
 const initialState = {
-    modalWindowIsNotFilled: false,
-    modalWindowSentSuccessfully: false,
-    modalWindowError: false,
     isFormValid: false,
     formControls: {
         name: {
@@ -70,12 +68,9 @@ const initialState = {
 };
 
 
-export default class FormContacts extends React.Component {
+class FormContacts extends React.Component {
     state = {
         message: {},
-        modalWindowIsNotFilled: false,
-        modalWindowSentSuccessfully: false,
-        modalWindowError: false,
         isFormValid: false,
         formControls: {
             name: {
@@ -168,7 +163,7 @@ export default class FormContacts extends React.Component {
 
     sendMessageHandler = () => {
         if(this.state.isFormValid === false) {
-            this.setState({ modalWindowIsNotFilled: true});
+           this.props.openModalWindow('Veuillez d\'abord remplir le formulaire');
             return
         }
 
@@ -183,12 +178,11 @@ export default class FormContacts extends React.Component {
 
         axios.post('https://lycee-575b7.firebaseio.com/form.json', this.state.message)
             .then(() => {
-                this.setState({modalWindowSentSuccessfully: true});
-                this.setState({formControls: initialState.formControls})
-                this.setState({isFormValid: false})
+                this.props.openModalWindow('Message envoyé avec succès');
+                this.setState({formControls: initialState.formControls, isFormValid: false});
 
             })
-            .catch(() => this.setState({modalWindowError: true}))
+            .catch(() => this.props.openModalWindow('Une erreur s\'est produite. Veuillez réessayer'));
     };
 
     onChangeHandler = (evt) => {
@@ -215,9 +209,6 @@ export default class FormContacts extends React.Component {
         return (
             <div className={cls.join(' ')}>
                 <h2>Formulaire de contact</h2>
-                {this.state.modalWindowIsNotFilled && <ModalWindow onCloseModalWindow={() => this.setState({modalWindowIsNotFilled: false})}>Veuillez d'abord remplir le formulaire</ModalWindow>}
-                {this.state.modalWindowSentSuccessfully && <ModalWindow onCloseModalWindow={() => this.setState({modalWindowSentSuccessfully: false})}>Message envoyé avec succès</ModalWindow>}
-                {this.state.modalWindowError && <ModalWindow onCloseModalWindow={() => this.setState({modalWindowError: false})}>Une erreur s'est produite. Veuillez réessayer</ModalWindow>}
                 <form onSubmit={this.submitHandler}>
                     <Input
                         label='Votre nom'
@@ -279,4 +270,12 @@ export default class FormContacts extends React.Component {
         )
     }
 }
+
+function mapDispatchToProps(dispatch) {
+    return {
+        openModalWindow: (message) => dispatch(openModalWindow(message))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(FormContacts)
 

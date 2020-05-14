@@ -12,11 +12,10 @@
         opacity: .7;
     }
 
-    &:focus, &:active {
+    &:focus {
         outline: none;
         opacity: .7;
     }
-
 }
 
 .MenuToggle.open {
@@ -24,6 +23,15 @@
     top: 0;
     right: 320px;
     color: $menu-toggle-dark-grey;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:focus {
+        outline: none;
+        color: black;
+    }
 }
 
 @media (max-width: 420px) {

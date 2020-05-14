@@ -1,7 +1,9 @@
-import {CHANGE_MENU_STATE, CLOSE_MENU} from "../actions/actionTypes";
+import {CHANGE_MENU_STATE, CLOSE_MENU, OPEN_MODAL_WINDOW, CLOSE_MODAL_WINDOW} from "../actions/actionTypes";
 
 const initialState = {
-    menu: true,
+    menu: false,
+    modalWindowIsShown: false,
+    message: '',
     directors: [
         {
             name: 'M le Directeur',
@@ -69,9 +71,21 @@ const initialState = {
 export default function lyceeReducer(state = initialState, action) {
   switch (action.type) {
       case CHANGE_MENU_STATE:
-          return Object.assign(state, { menu: !state.menu});
+          return {
+              ...state, menu: !state.menu
+          }
       case CLOSE_MENU:
-          return Object.assign(state, { menu: false});
+          return {
+              ...state, menu: false
+          }
+      case OPEN_MODAL_WINDOW:
+          return {
+              ...state, modalWindowIsShown: true, message: action.message
+          }
+      case CLOSE_MODAL_WINDOW:
+          return {
+              ...state, modalWindowIsShown: false
+          }
       default:
           return state
   }
